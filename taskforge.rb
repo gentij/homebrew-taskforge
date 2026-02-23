@@ -11,7 +11,7 @@ class Taskforge < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gentij/taskforge/releases/download/v0.1.0/taskforge_darwin_amd64.tar.gz"
-      sha256 "4c3047c9167112ed4ddf5cd45ef67e231bc02ad51966ca3385f4897279da6dfa"
+      sha256 "663d655255db026ffa374d941579e170eb454da6bc7df37332373cba4e46a478"
 
       define_method(:install) do
         bin.install "taskforge"
@@ -19,7 +19,7 @@ class Taskforge < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gentij/taskforge/releases/download/v0.1.0/taskforge_darwin_arm64.tar.gz"
-      sha256 "1f2730088ff97faeb40f879389325e3f5887da6bf951510021322a33de2c3223"
+      sha256 "29ee02fa5909f687f1abcfdb6ba98c0e1d94251074d88613f5275477f8daf9c7"
 
       define_method(:install) do
         bin.install "taskforge"
@@ -30,14 +30,14 @@ class Taskforge < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/gentij/taskforge/releases/download/v0.1.0/taskforge_linux_amd64.tar.gz"
-      sha256 "524e3f6a25a40cd1cf7d2009e422763062572ac71cd74cd414749e145d300b0b"
+      sha256 "888b19df5865413be2ee1fa966aa952c9f4a6fc165a5139bdeb02a7dc57a272d"
       define_method(:install) do
         bin.install "taskforge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gentij/taskforge/releases/download/v0.1.0/taskforge_linux_arm64.tar.gz"
-      sha256 "5eb745009c8e5700acd9f59f08930071bebbbb9396b086d6b7d6dce296f27d9d"
+      sha256 "796844eeb84274ba5ab1e32ed68723777eaddbcb619753a1bd53ca82b212fa70"
       define_method(:install) do
         bin.install "taskforge"
       end
